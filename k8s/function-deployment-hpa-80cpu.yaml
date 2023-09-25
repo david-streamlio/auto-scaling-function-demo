@@ -1,0 +1,42 @@
+apiVersion: compute.functionmesh.io/v1alpha1
+kind: Function
+metadata:
+  name: hpa-auto-scale-simulation
+spec:
+  className: io.streamnative.simulators.FixedWorkSimulator
+  forwardSourceMessageProperty: true
+  maxPendingAsyncRequests: 1000
+  replicas: 2
+  maxReplicas: 8
+  image: localhost:32000/fixed-work-simulator:0.0.2
+  logTopic: persistent://public/default/hpa-sim-log-80cpu
+  input:
+    topics:
+      - persistent://public/default/data-in
+    typeClassName: java.lang.String
+  pulsar:
+    pulsarConfig: "pulsar"
+  pod:
+    builtinAutoscaler:
+      - AverageUtilizationCPUPercent80
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256m
+    limits:
+      cpu: 1000m
+      memory: 1G
+  java:
+    jar: /pulsar/fixed-work-simulator-0.0.2.jar
+    # use "" to read jar from local file system
+    jarLocation: ""
+  clusterName: test-pulsar
+  autoAck: true
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pulsar
+data:
+  webServiceURL: http://192.168.1.120:8080
+  brokerServiceURL: pulsar://192.168.1.120:6650

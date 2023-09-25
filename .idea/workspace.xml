@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="17b50a40-a356-48cf-b194-dfc7bc9a7ba7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/function-deployment-hpa-20cpu.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/function-deployment-hpa-50cpu.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/function-deployment-hpa-80cpu.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/function-deployment-vpa.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/streamnative/simulators/FixedWorkSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/CalculatePi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/FindPrimes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/MemoryIntenseStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/ProcessingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/streamnative/simulators/utils/CpuSamplingThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/streamnative/simulators/FixedWorkSimulatorLocalRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/streamnative/simulators/strategy/CalculatePiStrategyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/streamnative/simulators/strategy/FindPrimesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/streamnative/simulators/strategy/MemoryIntenseStrategyTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2VfwizFxKfoD6CwTiXzxWtsuRwG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/david/clone-zone/personal/auto-scaling-function-demo/k8s",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s" />
+      <recent name="$PROJECT_DIR$/src/main/docker" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.streamnative.simulators" />
+      <recent name="io.streamnative.simulators.strategy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FindPrimesTest">
+    <configuration name="FixedWorkSimulatorLocalRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.streamnative.simulators.FixedWorkSimulatorLocalRunner" />
+      <module name="fixed-work-simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.streamnative.simulators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatePiStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fixed-work-simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.streamnative.simulators.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.streamnative.simulators.strategy" />
+      <option name="MAIN_CLASS_NAME" value="io.streamnative.simulators.strategy.CalculatePiStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CpuIntenseStrategyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fixed-work-simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.streamnative.simulators.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.streamnative.simulators.strategy" />
+      <option name="MAIN_CLASS_NAME" value="io.streamnative.simulators.strategy.CpuIntenseStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CpuIntenseStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fixed-work-simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.streamnative.simulators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.streamnative.simulators.strategy" />
+      <option name="MAIN_CLASS_NAME" value="io.streamnative.simulators.strategy.CpuIntenseStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindPrimesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fixed-work-simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.streamnative.simulators.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.streamnative.simulators.strategy" />
+      <option name="MAIN_CLASS_NAME" value="io.streamnative.simulators.strategy.FindPrimesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemoryIntenseStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fixed-work-simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.streamnative.data.feeds.realtime.processors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.streamnative.data.feeds.realtime.processors" />
+      <option name="MAIN_CLASS_NAME" value="io.streamnative.data.feeds.realtime.processors.MemoryIntenseStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FindPrimesTest" />
+        <item itemvalue="JUnit.CalculatePiStrategyTest" />
+        <item itemvalue="JUnit.CpuIntenseStrategyTest (1)" />
+        <item itemvalue="Application.FixedWorkSimulatorLocalRunner" />
+        <item itemvalue="JUnit.MemoryIntenseStrategyTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17b50a40-a356-48cf-b194-dfc7bc9a7ba7" name="Changes" comment="" />
+      <created>1695240585069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695240585069</updated>
+      <workItem from="1695240586157" duration="9658000" />
+      <workItem from="1695328128515" duration="9518000" />
+      <workItem from="1695343000783" duration="4498000" />
+      <workItem from="1695423774873" duration="1834000" />
+      <workItem from="1695660126157" duration="6123000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/CalculatePi.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/CalculatePi.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/streamnative/simulators/strategy/MemoryIntenseStrategy.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

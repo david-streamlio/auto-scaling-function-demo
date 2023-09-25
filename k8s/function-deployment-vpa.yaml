@@ -1,0 +1,56 @@
+apiVersion: compute.functionmesh.io/v1alpha1
+kind: Function
+metadata:
+  name: vpa-auto-scale-simulation
+spec:
+  tenant: "public"
+  namespace: "default"
+  className: io.streamnative.simulators.FixedWorkSimulator
+  forwardSourceMessageProperty: true
+  maxPendingAsyncRequests: 1000
+  autoAck: true
+  funcConfig:
+    userConfig:
+      strategy: io.streamnative.simulators.strategy.MemoryIntenseStrategy
+  replicas: 2
+  image: localhost:32000/fixed-work-simulator:0.0.2
+  logTopic: persistent://public/default/vpa-sim-logs
+  input:
+    topics:
+      - persistent://public/default/data-in
+    typeClassName: java.lang.String
+  pulsar:
+    pulsarConfig: "pulsar"
+  pod:
+    vpa:
+      updatePolicy:
+        updateMode: "Auto"
+      resourcePolicy:
+        containerPolicies:
+          - containerName: "*"
+            minAllowed:
+              cpu: 200m
+              memory: 100Mi
+            maxAllowed:
+              cpu: 1
+              memory: 2G
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256m
+    limits:
+      cpu: 1000m
+      memory: 2G
+  java:
+    jar: /pulsar/fixed-work-simulator-0.0.2.jar
+    # use "" to read jar from local file system
+    jarLocation: ""
+  clusterName: test-pulsar
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pulsar
+data:
+  webServiceURL: http://192.168.1.120:8080
+  brokerServiceURL: pulsar://192.168.1.120:6650
