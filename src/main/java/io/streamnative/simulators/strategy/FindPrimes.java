@@ -15,18 +15,18 @@ public class FindPrimes implements ProcessingStrategy {
     ExecutorService executor = Executors.newFixedThreadPool(20);
 
     @Override
-    public void process(String s) {
+    public void process(String s, int numInstances, int launchDelay) {
 
         CpuSamplingThread samplingThread = new CpuSamplingThread();
         samplingThread.start();
         List<Future<String>> futures = new ArrayList<>();
 
-        for (int idx = 0; idx < 5; idx++) {
+        for (int idx = 0; idx < numInstances; idx++) {
             futures.add(executor.submit(() -> { return new PrimeFinder(getMaxLong()).findPrimes(); }));
             try {
-                Thread.sleep(15 * 1000);
+                Thread.sleep(launchDelay * 1000);
             } catch (InterruptedException iEx) {
-
+                System.err.println(iEx);
             }
         }
 

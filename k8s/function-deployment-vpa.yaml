@@ -12,8 +12,10 @@ spec:
   funcConfig:
     userConfig:
       strategy: io.streamnative.simulators.strategy.MemoryIntenseStrategy
+      numInstances: 3
+      launchDelay: 30
   replicas: 2
-  image: localhost:32000/fixed-work-simulator:0.0.2
+  image: localhost:32000/fixed-work-simulator:0.0.3
   logTopic: persistent://public/default/vpa-sim-logs
   input:
     topics:
@@ -42,7 +44,7 @@ spec:
       cpu: 1000m
       memory: 2G
   java:
-    jar: /pulsar/fixed-work-simulator-0.0.2.jar
+    jar: /pulsar/fixed-work-simulator-0.0.3.jar
     # use "" to read jar from local file system
     jarLocation: ""
   clusterName: test-pulsar
@@ -52,5 +54,5 @@ kind: ConfigMap
 metadata:
   name: pulsar
 data:
-  webServiceURL: http://192.168.1.120:8080
-  brokerServiceURL: pulsar://192.168.1.120:6650
+  webServiceURL: http://192.168.1.100:8080
+  brokerServiceURL: pulsar://192.168.1.100:6650

@@ -15,11 +15,11 @@ public class MemoryIntenseStrategy implements ProcessingStrategy {
     ExecutorService executor = Executors.newFixedThreadPool(20);
 
     @Override
-    public void process(String s) {
+    public void process(String s, int numInstances, int launchDelay) {
 
         List<Callable<String>> tasks = new ArrayList<>();
 
-        for (int idx = 0; idx < 5; idx++) {
+        for (int idx = 0; idx < numInstances; idx++) {
             tasks.add(() -> { return new RandomStringSorter(500000l, 1000).generateAndSort(); });
         }
 

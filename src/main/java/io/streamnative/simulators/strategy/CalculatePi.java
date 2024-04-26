@@ -15,10 +15,10 @@ public class CalculatePi implements ProcessingStrategy {
     ExecutorService executor = Executors.newFixedThreadPool(10);
 
     @Override
-    public void process(String s) {
+    public void process(String s, int numInstances, int launchDelay) {
         List<Callable<BigDecimal>> tasks = new ArrayList<>();
 
-        for (int idx = 0; idx < 5; idx++) {
+        for (int idx = 0; idx < numInstances; idx++) {
             tasks.add( () -> { return new PiCalculator(20000).calculatePi(); });
         }
 

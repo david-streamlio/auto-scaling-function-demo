@@ -8,6 +8,6 @@ public class MemoryIntenseStrategyTest {
     @Test
     public final void simpleTest() {
         MemoryIntenseStrategy strategy = new MemoryIntenseStrategy();
-        strategy.process("");
+        strategy.process("", 5, 15);
     }
 }

@@ -6,9 +6,15 @@ spec:
   className: io.streamnative.simulators.FixedWorkSimulator
   forwardSourceMessageProperty: true
   maxPendingAsyncRequests: 1000
-  replicas: 2
+  autoAck: true
+  funcConfig:
+    userConfig:
+      strategy: io.streamnative.simulators.strategy.FindPrimes
+      numInstances: 3
+      launchDelay: 30
+  replicas: 1
   maxReplicas: 8
-  image: localhost:32000/fixed-work-simulator:0.0.2
+  image: localhost:32000/fixed-work-simulator:0.0.3
   logTopic: persistent://public/default/hpa-sim-logs-50cpu
   input:
     topics:
@@ -27,16 +33,15 @@ spec:
       cpu: 1000m
       memory: 1G
   java:
-    jar: /pulsar/fixed-work-simulator-0.0.2.jar
+    jar: /pulsar/fixed-work-simulator-0.0.3.jar
     # use "" to read jar from local file system
     jarLocation: ""
   clusterName: test-pulsar
-  autoAck: true
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: pulsar
 data:
-  webServiceURL: http://192.168.1.121:8080
-  brokerServiceURL: pulsar://192.168.1.121:6650
+  webServiceURL: http://192.168.1.100:8080
+  brokerServiceURL: pulsar://192.168.1.100:6650
