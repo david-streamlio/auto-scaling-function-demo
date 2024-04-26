@@ -8,9 +8,13 @@ public class FixedWorkSimulator implements Function<String, Void> {
 
     private ProcessingStrategy strategy;
 
+    private int numInstances;
+
+    private int launchDelay;
+
     @Override
     public Void process(String input, Context context) throws Exception {
-        strategy.process(input);
+        strategy.process(input, numInstances, launchDelay);
         return null;
     }
 
@@ -22,6 +26,9 @@ public class FixedWorkSimulator implements Function<String, Void> {
 
         context.getLogger().info(String.format("Using %s strategy", clazz));
         strategy = (ProcessingStrategy) Class.forName(clazz).newInstance();
+        numInstances = (int) context.getUserConfigValueOrDefault("numInstances", 5);
+        launchDelay = (int) context.getUserConfigValueOrDefault("launchDelay", 15);
+
     }
 
     @Override

@@ -7,6 +7,6 @@ public class CalculatePiStrategyTest {
     @Test
     public final void simpleTest() {
         CalculatePi calc = new CalculatePi();
-        calc.process("");
+        calc.process("", 1, 1);
     }
 }
